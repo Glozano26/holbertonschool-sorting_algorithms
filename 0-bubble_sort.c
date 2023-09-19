@@ -12,7 +12,8 @@ void cambiar_pos(int *n1, int *n2)
 }
 /**
   *bubble_sort - function that sorts an array of integers in ascending
-  *@size: size array
+  *@array: array to sort
+  *@size: size of array
   *Return: void
   */
 void bubble_sort(int *array, size_t size)
