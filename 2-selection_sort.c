@@ -9,12 +9,14 @@
 
 void selection_sort(int *array, size_t size)
 {
-	unsigned int i = 0, j =  1;
+	unsigned int i = 0, j;
 	int least, aux, least_index;
 
 	while (i < size - 1)
 	{
 		least = array[i];
+		least_index = i;
+		j = i + 1;
 		while (j < size)
 		{
 			if (least > array[j])
@@ -27,11 +29,10 @@ void selection_sort(int *array, size_t size)
 		if (i != (unsigned int)least_index)
 		{
 			aux = array[i];
-			array[i] = least;
+			array[i] = array[least_index];
 			array[least_index] = aux;
 			print_array(array, size);
 		}
 		i++;
-		j = i + 1;
 	}
 }
