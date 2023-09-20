@@ -11,8 +11,8 @@ void selection_sort(int *array, size_t size)
 {
 	unsigned int i = 0, j;
 	int least, aux, least_index;
-	
-	if (!*array)
+
+	if (*array <= 0)
 		return;
 	while (i < size - 1)
 	{
